@@ -1,10 +1,11 @@
 <div class="popovers">
     
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
-        Hide Stats
-      </button>
-      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover">
-        Nominate Someone
-      </button>
-      
+  <div class="popovers">
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('Hide Stats')" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
+      Hide Stats
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick('Nominate Someone')" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover" [disabled]="isOnNominatePage">
+      Nominate Someone
+    </button>
+  </div>
  </div>
