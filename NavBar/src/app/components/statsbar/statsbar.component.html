@@ -1,11 +1,27 @@
 <div class="popovers">
-    
-  <div class="popovers">
-    <button type="button" class="btn btn-secondary" (click)="onButtonClick('Hide Stats')" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
-      Hide Stats
+  <div>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick(false)" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
+     {{ isHiddenStats ? 'Show Stats' : 'Hide Stats' }}
     </button>
-    <button type="button" routerLink="nominate" class="btn btn-secondary" (click)="onButtonClick('Nominate Someone')" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover" [disabled]="isOnNominatePage">
+    <button type="button" routerLink="nominate" class="btn btn-secondary" (click)="onButtonClick(true)" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover" *ngIf="!isOnNominatePage">
       Nominate Someone
     </button>
   </div>
- </div>
+  <div class="theSats">
+    Stats content
+  </div>
+</div>
+
+<!-- <div class="popovers">
+  <div>
+    <button type="button" class="btn btn-secondary" (click)="onButtonClick(false)" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
+      {{ isStatsHidden ? 'Show Stats' : 'Hide Stats' }}
+    </button>
+    <button type="button" routerLink="nominate" class="btn btn-secondary" (click)="onButtonClick(true)" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover" *ngIf="!isOnNominatePage">
+      Nominate Someone
+    </button>
+  </div>
+  <div class="theSata" [@slideUpDown]="statsAnimationState">
+    Stats content
+  </div>
+</div> -->

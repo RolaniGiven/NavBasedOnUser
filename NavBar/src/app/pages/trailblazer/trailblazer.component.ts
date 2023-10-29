@@ -8,7 +8,7 @@ import { PageService } from 'src/app/services/page.service';
 })
 export class TrailblazerComponent implements OnInit {
   
-  currentPage: string = 'This is the Nominate Trailblaizer';
+  currentPage: string = 'This is the Trailblaizer';
 
   constructor(private pageService: PageService) {}
 
